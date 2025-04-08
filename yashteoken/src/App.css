@@ -1,0 +1,205 @@
+/* YashToken.css */
+:root {
+  --primary-color: #4361ee;
+  --primary-light: #4895ef;
+  --secondary-color: #3f37c9;
+  --background-color: #f8f9fa;
+  --card-bg: #ffffff;
+  --text-color: #333333;
+  --text-light: #666666;
+  --border-color: #e0e0e0;
+  --success-color: #2ecc71;
+  --hover-color: #3a0ca3;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+.dashboard-container {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.dashboard-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 25px;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.account-info {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 15px;
+  backdrop-filter: blur(5px);
+}
+
+.account-item {
+  margin-bottom: 8px;
+}
+
+.account-item:last-child {
+  margin-bottom: 0;
+}
+
+.label {
+  font-weight: 500;
+  margin-right: 10px;
+  opacity: 0.9;
+}
+
+.value {
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.dashboard-section {
+  padding: 25px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.dashboard-section:last-child {
+  border-bottom: none;
+}
+
+.dashboard-section h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.holders-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.holder-item {
+  background-color: #f5f7ff;
+  padding: 12px 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-family: monospace;
+  font-size: 14px;
+  overflow-wrap: break-word;
+  border-left: 4px solid var(--primary-light);
+}
+
+.transactions-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.transaction-card {
+  background-color: #f5f7ff;
+  border-radius: 8px;
+  padding: 15px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.transaction-row {
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-label {
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--text-light);
+  margin-bottom: 2px;
+}
+
+.transaction-value {
+  font-family: monospace;
+  word-break: break-all;
+  font-size: 14px;
+}
+
+.transfer-form {
+  max-width: 500px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.2);
+}
+
+.transfer-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.transfer-button:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-2px);
+}
+
+.transfer-button:active {
+  transform: translateY(0);
+}
+
+.empty-message {
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 15px;
+  }
+  
+  .transactions-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboard-section {
+    padding: 20px;
+  }
+}
